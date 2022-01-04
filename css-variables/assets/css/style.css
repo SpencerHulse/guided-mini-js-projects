@@ -1,3 +1,10 @@
+/* default variables that are to be manipulated by js */
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
 body {
   text-align: center;
   background: #193549;
@@ -13,4 +20,14 @@ body {
 
 input {
   width: 100px;
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+.h1 {
+  color: var(--base);
 }

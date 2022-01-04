@@ -6,9 +6,12 @@
     <title>Scoped CSS Variables and JS</title>
   </head>
   <body>
+    <!-- span changes color with every other of the same variable -->
     <h2>Update CSS Variables with <span class="hl">JS</span></h2>
 
+    <!-- controls the various inputs for css manipulation -->
     <div class="controls">
+      <!-- controls the spacing - type is range for a slider -->
       <label for="spacing">Spacing:</label>
       <input
         id="spacing"
@@ -19,7 +22,7 @@
         value="10"
         data-sizing="px"
       />
-
+      <!-- controls the blur - type is range for a slider -->
       <label for="blur">Blur:</label>
       <input
         id="blur"
@@ -30,7 +33,7 @@
         value="10"
         data-sizing="px"
       />
-
+      <!-- controls the color - type is color for a color picker -->
       <label for="base">Base Color</label>
       <input id="base" type="color" name="base" value="#ffc600" />
     </div>
