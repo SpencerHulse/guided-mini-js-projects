@@ -67,3 +67,7 @@ body {
   width: 35%;
   left: 15%;
 }
+
+.no-transition {
+  transition: none;
+}
