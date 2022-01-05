@@ -72,13 +72,6 @@ body {
   transition: none;
 }
 
-.digital-time {
-  position: absolute;
-  right: 44%;
-  top: 22%;
-  font-size: 40px;
-}
-
 /* positioning for hours on the clock */
 .time {
   position: absolute;

@@ -43,14 +43,6 @@ let setDate = () => {
   }
 
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-
-  //sends the time to the div, making a digital clock
-  if (seconds < 10) {
-    //adds a 0 on the end of 0-9 to ensure consistent size and appearance
-    digitalTime.textContent = hours + ":" + minutes + ":" + "0" + seconds;
-  } else {
-    digitalTime.textContent = hours + ":" + minutes + ":" + seconds;
-  }
 };
 //set immediately to prevent the hands from being stationary upon first load
 setDate();
