@@ -1,7 +1,7 @@
 html {
-  background: #018DED url(../images/881-1500x1000-blur_5.jpg);
+  background: #018ded url(../images/881-1500x1000-blur_5.jpg);
   background-size: cover;
-  font-family: 'helvetica neue', Arial, Helvetica, sans-serif;
+  font-family: "helvetica neue", Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 10px;
 }
@@ -23,11 +23,8 @@ body {
   margin: 50px auto;
   position: relative;
   padding: 2rem;
-  box-shadow:
-    0 0 0 4px rgba(0,0,0,0.1),
-    inset 0 0 0 3px #EFEFEF,
-    inset 0 0 10px black,
-    0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .clock-face {
@@ -43,4 +40,30 @@ body {
   background: black;
   position: absolute;
   top: 50%;
+  /* the origin dictates where the transform occurs
+  50% is the default, which is the middle
+  100% causes rotation from the right end (center of clock) */
+  transform-origin: 100%;
+  /* positions the hands at the 12 spot by default */
+  transform: rotate(90deg);
+  /* caused the transition to happen over 0.5s */
+  transition: all 0.05s;
+  /* using this bezier causes it to go a bit past its bounds and snap back
+  this gives it a more realistic feel
+  it can be played with easily in dev tools */
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+/* my own adjustments to make the hands stand out */
+.second-hand {
+  height: 3px;
+}
+
+.min-hand {
+  height: 4.5px;
+}
+
+.hour-hand {
+  width: 35%;
+  left: 15%;
 }
