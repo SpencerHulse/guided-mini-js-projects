@@ -1,16 +1,18 @@
 const secondHand = document.querySelector(".second-hand");
 const minuteHand = document.querySelector(".min-hand");
 const hourHand = document.querySelector(".hour-hand");
+const digitalTime = document.querySelector(".digital-time");
 
 let setDate = () => {
   //gets the current date/time
   const now = new Date();
   //gets the current seconds every second due to interval
   const seconds = now.getSeconds();
-  //converts the seconds to the degree for rotation
-  //The + 90 offsets the initial 90 degree rotation in css
+  /* converts the seconds to the degree for rotation
+  the + 90 offsets the initial 90 degree rotation in css */
   const secondsDegrees = (seconds / 60) * 360 + 90;
-  //adding a no-transition class to override the transition and avoid a bug when deg rolls over
+  /* adding a no-transition class to override the transition and avoid a bug when deg rolls over
+  doing it inline would not work since it would not properly override */
   if (secondsDegrees == 90) {
     secondHand.classList.add("no-transition");
   } else {
@@ -41,6 +43,14 @@ let setDate = () => {
   }
 
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+  //sends the time to the div, making a digital clock
+  if (seconds < 10) {
+    //adds a 0 on the end of 0-9 to ensure consistent size and appearance
+    digitalTime.textContent = hours + ":" + minutes + ":" + "0" + seconds;
+  } else {
+    digitalTime.textContent = hours + ":" + minutes + ":" + seconds;
+  }
 };
 //set immediately to prevent the hands from being stationary upon first load
 setDate();

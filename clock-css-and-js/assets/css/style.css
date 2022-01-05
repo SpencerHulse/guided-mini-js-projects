@@ -71,3 +71,78 @@ body {
 .no-transition {
   transition: none;
 }
+
+.digital-time {
+  position: absolute;
+  right: 44%;
+  top: 22%;
+  font-size: 40px;
+}
+
+/* positioning for hours on the clock */
+.time {
+  position: absolute;
+  font-size: 26px;
+  font-weight: bolder;
+  color: black;
+}
+
+#one {
+  right: 23%;
+  top: 4%;
+}
+
+#two {
+  right: 4%;
+  top: 21%;
+}
+
+#three {
+  right: -3%;
+  top: 45%;
+}
+
+#four {
+  right: 4%;
+  top: 71%;
+}
+
+#five {
+  right: 23%;
+  top: 89%;
+}
+
+#six {
+  right: 48%;
+  top: 95%;
+}
+
+#seven {
+  right: 72%;
+  top: 88%;
+}
+
+#eight {
+  right: 91%;
+  top: 70%;
+}
+
+#nine {
+  right: 97%;
+  top: 45%;
+}
+
+#ten {
+  right: 86%;
+  top: 22%;
+}
+
+#eleven {
+  right: 70%;
+  top: 5%;
+}
+
+#twelve {
+  right: 45%;
+  top: -2%;
+}
